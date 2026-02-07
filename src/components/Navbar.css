@@ -1,0 +1,409 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.navbar {
+    background-color: #262626;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.b1,
+.span1 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.btn1 {
+    background-color: #82b440;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #FAFAFA;
+}
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-text {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 6rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.butterfly {
+    height: 80px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #6d6d6d;
+    margin: 20px 0;
+    max-width: 500px;
+}
+
+.hero-btn {
+    padding: 12px 30px;
+    border-radius: 10px;
+    border: 2px solid #d9b8ac;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.cloud {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 150px;
+}
+
+.bird {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    width: 120px;
+}
+
+.wings {
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+    width: 100px;
+}
+
+.leaf {
+    position: absolute;
+    width: 70px;
+    height: 20vh;
+    gap: 20px;
+}
+
+.leaf1 {
+    top: 70%;
+    right: 20%;
+}
+
+.leaf2 {
+    top: 75%;
+    right: 25%;
+}
+
+.leaf3 {
+    top: 70%;
+    right: 15%;
+}
+
+.leaf4 {
+    top: 75%;
+    right: 10%;
+}
+
+.bike {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 200px;
+}
+
+
+@keyframes float1 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes float2 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float3 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes float4 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes float5 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float6 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes float7 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes float8 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.floating1 {
+    animation: float1 4s ease-in-out infinite;
+}
+
+.floating2 {
+    animation: float2 5s ease-in-out infinite;
+}
+
+.floating3 {
+    animation: float3 6s ease-in-out infinite;
+}
+
+.floating4 {
+    animation: float4 5s ease-in-out infinite;
+}
+
+.floating5 {
+    animation: float5 6s ease-in-out infinite;
+}
+
+.floating6 {
+    animation: float6 4s ease-in-out infinite;
+}
+
+.floating7 {
+    animation: float7 5s ease-in-out infinite;
+}
+
+.floating8 {
+    animation: float8 6s ease-in-out infinite;
+}
+
+
+@media(max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .butterfly {
+        height: 50px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        max-width: 300px;
+    }
+
+    .cloud,
+    .bird,
+    .wings,
+    .leaf,
+    .bike {
+        width: 80px;
+    }
+
+    .bike {
+        width: 120px;
+    }
+}
+
+.hero-btn:hover {
+    background-color: #E1C0B0;
+transition: background ease-out 1s;
+color: #FAFAFA;
+} 
+
+
+
+
+.card {
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+.imageScroll {
+  height: 200px;
+  overflow: hidden;
+}
+
+
+.images {
+  transition: transform 5s linear;
+}
+
+.images img {
+  width: 100%;
+  display: block;
+}
+
+
+.card:hover .images {
+  transform: translateY(calc(-100% + 200px));
+}
+
+.title {
+  padding: 10px;
+  font-size: 17px;
+    margin-top: 21px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+
+.cards {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+.cheerfulSection {
+  position: relative;
+  padding: 120px 20px;
+  background: #faf9f7;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.cheerfulContent h2 {
+  max-width: 900px;
+  margin: auto;
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #222;
+}
+
+.cheerfulContent em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+
+.cheerfulBtn {
+  margin-top: 40px;
+  padding: 16px 42px;
+  border: 2px solid #e6b9a6;
+  background: transparent;
+  letter-spacing: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cheerfulBtn:hover {
+  background: #e6b9a6;
+  color: white;
+}
+
+
+.cheerfulIllustration {
+  position: relative;
+  margin-top: 90px;
+}
+
+.lastleaf {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.last {
+    height: 60vh;
+}
