@@ -1,4 +1,5 @@
 import React from "react";
+
 import './Navbar.css';
 import img1 from "../assets/envato.png";
 import img2 from "../assets/cloud-shape.png";
@@ -21,8 +22,14 @@ import img18 from "../assets/cardimg9.jpg";
 import img19 from "../assets/last.png";
 import img20 from "../assets/lastleaf.png";
 import img21 from "../assets/end.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
+AOS.init({ once: true });
 
 function Navbar() {
+  
   return (
     <>
   <nav className="navbar navbar-expand-lg sticky-top nav">
@@ -75,7 +82,8 @@ function Navbar() {
         <img src={img6} alt="Leaf2" className="leaf leaf2 floating5" />
         <img src={img7} alt="Leaf3" className="leaf leaf3 floating6" />
         <img src={img8} alt="Leaf4" className="leaf leaf4 floating7" />
-        <img src={img4} alt="Bicycle" className="bike floating8" />
+        <img src={img4} alt="Bicycle" className="bike floating8" 
+        />
       </section>
 
 <br /><br /><br /><br />
