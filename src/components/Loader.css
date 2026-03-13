@@ -4,12 +4,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
   opacity: 1;
   visibility: visible;
 }
@@ -21,35 +21,54 @@
 
 .loader-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 16px;
-}
-
-.edgtf-butterfly {
-  width: 50px;
-  height: 52px;
-  fill: #1a1a1a;
-  animation: butterflyPulse 1.8s ease-in-out infinite;
+  gap: 6px;
 }
 
 .loader-title {
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: 0.3em;
+  font-size: 42px;
+  font-weight: 600;
+  font-style: italic;
   color: #1a1a1a;
-  text-transform: uppercase;
-  animation: fadeSlideUp 0.8s ease forwards;
+  letter-spacing: 0.01em;
+  font-family: Georgia, serif;
   opacity: 0;
-  animation-delay: 0.3s;
+  animation: fadeIn 0.6s ease forwards 0.2s;
 }
 
-@keyframes butterflyPulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50%       { transform: scale(1.12); opacity: 0.6; }
+.edgtf-butterfly {
+  width: 28px;
+  height: 30px;
+  fill: #e8896a;
+  opacity: 0;
+  animation: arcDrop 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.7s;
+  transform-origin: left center;
 }
 
-@keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Title fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Arc from top-left sweeping down to resting position */
+@keyframes arcDrop {
+  0% {
+    opacity: 1;
+    transform: translate(-60px, -80px) rotate(-120deg) scale(0.6);
+  }
+  40% {
+    transform: translate(-20px, -40px) rotate(-60deg) scale(0.85);
+  }
+  70% {
+    transform: translate(5px, 10px) rotate(10deg) scale(1.05);
+  }
+  85% {
+    transform: translate(2px, -4px) rotate(-5deg) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+  }
 }
