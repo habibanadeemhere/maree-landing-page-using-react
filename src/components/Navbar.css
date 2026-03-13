@@ -545,3 +545,106 @@ color: #FAFAFA;
     transform:translate(0,0) rotate(0deg) scale(1);
   }
 }
+
+
+
+@media (max-width: 768px) {
+
+  /* Hero text */
+  .hero-text h1 {
+    font-size: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .butterfly {
+    height: 50px;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+    max-width: 280px;
+    padding: 0 10px;
+  }
+
+  .hero-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* Floating elements — scale down */
+  .cloud { width: 90px; top: 3%; left: 5%; }
+  .bird  { width: 70px; top: 8%; right: 3%; }
+  .bike  { width: 130px; bottom: 3%; left: 2%; }
+
+  .leaf  { width: 45px; height: 12vh; }
+  .leaf1 { top: 65%; right: 12%; }
+  .leaf2 { top: 70%; right: 18%; }
+  .leaf3 { top: 65%; right: 6%;  }
+  .leaf4 { top: 70%; right: 1%;  }
+
+  /* Cards */
+  .cards {
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Cheerful section */
+  .cheerfulContent h2 {
+    font-size: 26px;
+    padding: 0 16px;
+  }
+
+  .cheerfulBtn {
+    padding: 12px 28px;
+    font-size: 12px;
+  }
+
+  /* Last leaf images */
+  .lastleaf {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .last {
+    height: 35vh;
+    width: 90%;
+    object-fit: contain;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .butterfly {
+    height: 36px;
+  }
+
+  .hero-text p {
+    font-size: 0.85rem;
+    max-width: 240px;
+  }
+
+  .cloud { width: 70px; }
+  .bird  { width: 55px; }
+  .bike  { width: 100px; }
+  .leaf  { width: 35px; }
+
+  .cheerfulContent h2 {
+    font-size: 20px;
+  }
+
+  .last {
+    height: 25vh;
+  }
+}
