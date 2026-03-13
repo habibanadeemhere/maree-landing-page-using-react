@@ -719,3 +719,115 @@ color: #FAFAFA;
     height: 25vh;
   }
 }
+
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 80px 20px 200px 20px;
+    align-items: center;
+  }
+
+  /* Hero text */
+  .hero-text h1 {
+    font-size: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .butterfly {
+    height: 40px;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+    max-width: 260px;
+    margin: 12px auto;
+  }
+
+  .hero-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* Cloud — top left, smaller */
+  .cloud {
+    width: 80px;
+    top: 2%;
+    left: 4%;
+  }
+
+  /* Bird — push it far right and lower so it doesn't overlap title */
+  .bird {
+    width: 55px;
+    top: 4%;
+    right: 4%;
+  }
+
+  /* Bike — bottom left */
+  .bike {
+    width: 120px;
+    bottom: 2%;
+    left: 2%;
+  }
+
+  /* Leaves — bottom right, smaller */
+  .leaf  { width: 40px; height: 10vh; }
+  .leaf1 { top: auto; bottom: 8%; right: 10%; }
+  .leaf2 { top: auto; bottom: 12%; right: 18%; }
+  .leaf3 { top: auto; bottom: 8%; right: 4%;  }
+  .leaf4 { top: auto; bottom: 12%; right: 25%; }
+
+  /* Cards */
+  .cards {
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Cheerful section */
+  .cheerfulContent h2 {
+    font-size: 24px;
+    padding: 0 16px;
+  }
+
+  .cheerfulBtn {
+    padding: 12px 28px;
+    font-size: 12px;
+  }
+
+  /* Last images stack */
+  .lastleaf {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .last {
+    height: auto;
+    width: 85%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .butterfly { height: 32px; }
+  .cloud  { width: 65px; }
+  .bird   { width: 45px; }
+  .bike   { width: 100px; }
+  .leaf   { width: 32px; }
+
+  .cheerfulContent h2 {
+    font-size: 18px;
+  }
+}
