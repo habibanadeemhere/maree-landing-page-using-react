@@ -51,24 +51,29 @@ function Navbar() {
         </div>
       </nav>
 
-      <section className="hero">
-  <div className="hero-text animate-hero-text">
+   <section className="hero">
+  <div className="hero-text">
     <h1 className="animate-title">
-      Marée <img src={img9} alt="Butterfly" className="butterfly butterfly-entrance" />
+      Marée
+      <img src={img9} alt="Butterfly" className="butterfly butterfly-entrance" />
     </h1>
+
     <p className="animate-para">
       Welcome to Marée, a brand new illustration & design portfolio just
       waiting for your work to start populating its templates!
     </p>
+
     <button className="hero-btn animate-btn">Purchase</button>
   </div>
 
-  <img src={img2} alt="Cloud"   className="cloud floating1 animate-cloud" />
-  <img src={img3} alt="Bird"    className="bird floating2 animate-bird" />
-  <img src={img5} alt="Leaf1"   className="leaf leaf1 floating4 animate-leaves" />
-  <img src={img6} alt="Leaf2"   className="leaf leaf2 floating5 animate-leaves animate-leaves-d2" />
-  <img src={img7} alt="Leaf3"   className="leaf leaf3 floating6 animate-leaves animate-leaves-d3" />
-  <img src={img8} alt="Leaf4"   className="leaf leaf4 floating7 animate-leaves animate-leaves-d4" />
+  <img src={img2} alt="Cloud" className="cloud floating1 animate-cloud" />
+  <img src={img3} alt="Bird" className="bird floating2 animate-bird" />
+
+  <img src={img5} alt="Leaf1" className="leaf leaf1 floating4 animate-leaves" />
+  <img src={img6} alt="Leaf2" className="leaf leaf2 floating5 animate-leaves animate-leaves-d2" />
+  <img src={img7} alt="Leaf3" className="leaf leaf3 floating6 animate-leaves animate-leaves-d3" />
+  <img src={img8} alt="Leaf4" className="leaf leaf4 floating7 animate-leaves animate-leaves-d4" />
+
   <img src={img4} alt="Bicycle" className="bike floating8 animate-bike" />
 </section>
       <br /><br /><br /><br />
