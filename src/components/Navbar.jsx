@@ -24,9 +24,16 @@ import img21 from "../assets/end.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init({ once: true, duration: 800 });
+
 
 function Navbar() {
+   useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 800
+    });
+  }, []);
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg sticky-top nav">
