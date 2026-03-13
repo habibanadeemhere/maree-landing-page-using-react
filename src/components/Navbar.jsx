@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import './Navbar.css';
 import img1 from "../assets/envato.png";
 import img2 from "../assets/cloud-shape.png";
@@ -25,25 +24,17 @@ import img21 from "../assets/end.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
-AOS.init({ once: true });
+AOS.init({ once: true, duration: 800 });
 
 function Navbar() {
-  
   return (
     <>
-  <nav className="navbar navbar-expand-lg sticky-top nav">
+      <nav className="navbar navbar-expand-lg sticky-top nav">
         <div className="container-fluid">
           <img src={img1} alt="Logo" className="logo" />
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarText" aria-controls="navbarText"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarText">
@@ -60,12 +51,10 @@ function Navbar() {
         </div>
       </nav>
 
-      
       <section className="hero">
-       
-        <div className="hero-text">
+        <div className="hero-text animate-hero-text">
           <h1>
-            Marée <img src={img9} alt="Butterfly" className="butterfly" />
+            Marée <img src={img9} alt="Butterfly" className="butterfly butterfly-entrance" />
           </h1>
           <p>
             Welcome to Marée, a brand new illustration & design portfolio just
@@ -74,162 +63,63 @@ function Navbar() {
           <button className="hero-btn">Purchase</button>
         </div>
 
-      
-        <img src={img2} alt="Cloud" className="cloud floating1" />
-        <img src={img3} alt="Bird" className="bird floating2" />
-
-        <img src={img5} alt="Leaf1" className="leaf leaf1 floating4" />
-        <img src={img6} alt="Leaf2" className="leaf leaf2 floating5" />
-        <img src={img7} alt="Leaf3" className="leaf leaf3 floating6" />
-        <img src={img8} alt="Leaf4" className="leaf leaf4 floating7" />
-        <img src={img4} alt="Bicycle" className="bike floating8" 
-        />
+        <img src={img2} alt="Cloud" className="cloud floating1 animate-cloud" />
+        <img src={img3} alt="Bird" className="bird floating2 animate-bird" />
+        <img src={img5} alt="Leaf1" className="leaf leaf1 floating4 animate-leaves" />
+        <img src={img6} alt="Leaf2" className="leaf leaf2 floating5 animate-leaves" />
+        <img src={img7} alt="Leaf3" className="leaf leaf3 floating6 animate-leaves" />
+        <img src={img8} alt="Leaf4" className="leaf leaf4 floating7 animate-leaves" />
+        <img src={img4} alt="Bicycle" className="bike floating8 animate-bike" />
       </section>
 
-<br /><br /><br /><br />
+      <br /><br /><br /><br />
 
-<div className="cards">
-<div className="card">
-      <div className="imageScroll">
-        <div className="images">
-          <img src={img10} alt="img1" />
+      <div className="cards">
+        {[
+          { img: img10, title: "Main Home" },
+          { img: img11, title: "Floating Portfolio" },
+          { img: img12, title: "Portfolio Pinterest" },
+          { img: img13, title: "Animated Slider" },
+          { img: img14, title: "Portfolio Metro" },
+          { img: img15, title: "Portfolio Gallery" },
+          { img: img16, title: "Interactive Links" },
+          { img: img17, title: "Split Slider Showcase" },
+          { img: img18, title: "Portfolio Carousel" },
+        ].map((card, i) => (
+          <div className="card" key={i} data-aos="fade-up" data-aos-delay={i * 80}>
+            <div className="imageScroll">
+              <div className="images">
+                <img src={card.img} alt={card.title} />
+              </div>
+            </div>
+            <h3 className="title">{card.title}</h3>
+          </div>
+        ))}
+      </div>
 
+      <br /><br /><br />
 
+      <section className="cheerfulSection">
+        <span className="decor dot"></span>
+        <span className="decor heart"></span>
+        <span className="decor leaf left"></span>
+        <span className="decor leaf right"></span>
+        <div className="cheerfulContent" data-aos="fade-up">
+          <h2>
+            Your brand new folio with a professional layout collection
+            and quite a cheerful <em>personality!</em>
+          </h2>
+          <button className="cheerfulBtn">PURCHASE</button>
         </div>
-      </div>
-
-      <h3 className="title">Main Home</h3>
-    </div>
-
-    <div className="card">
-      <div className="imageScroll">
-        <div className="images">
-          <img src={img11} alt="img1" />
-
-
+        <br /><br />
+        <div className="lastleaf" data-aos="fade-up" data-aos-delay="200">
+          <img className="last" src={img20} alt="" />
+          <img className="last" src={img19} alt="" />
+          <img className="last" src={img21} alt="" />
         </div>
-      </div>
-
-      <h3 className="title">Floating Portfolio</h3>
-    </div>
-
-    <div className="card">
-      <div className="imageScroll">
-        <div className="images">
-          <img src={img12} alt="img1" />
-
-
-        </div>
-      </div>
-
-      <h3 className="title">Portfolio Pinterest</h3>
-    </div>
-
-
-    <div className="card">
-      <div className="imageScroll">
-        <div className="images">
-          <img src={img13} alt="img1" />
-
-
-        </div>
-      </div>
-
-      <h3 className="title">Animated Slider</h3>
-    </div>
-
-
-
-    <div className="card">
-      <div className="imageScroll">
-        <div className="images">
-          <img src={img14} alt="img1" />
-
-
-        </div>
-      </div>
-
-      <h3 className="title">Portfolio Metro</h3>
-    </div>
-
-    <div className="card">
-      <div className="imageScroll">
-        <div className="images">
-          <img src={img15} alt="img1" />
-
-
-        </div>
-      </div>
-
-      <h3 className="title">Portfolio Gallery</h3>
-    </div>
-
-
-<div className="card">
-      <div className="imageScroll">
-        <div className="images">
-          <img src={img16} alt="img1" />
-
-
-        </div>
-      </div>
-
-      <h3 className="title">Interactive Links</h3>
-    </div>
-
-    <div className="card">
-      <div className="imageScroll">
-        <div className="images">
-          <img src={img17} alt="img1" />
-
-
-        </div>
-      </div>
-
-      <h3 className="title">Split Slider Showcase</h3>
-    </div>
-
-    <div className="card">
-      <div className="imageScroll">
-        <div className="images">
-          <img src={img18} alt="img1" />
-
-
-        </div>
-      </div>
-
-      <h3 className="title">Portfolio Carousel
-</h3>
-    </div></div>
-    <br /><br /><br />
-
-<section className="cheerfulSection">
-      <span className="decor dot"></span>
-      <span className="decor heart"></span>
-      <span className="decor leaf left"></span>
-      <span className="decor leaf right"></span>
-
-      <div className="cheerfulContent">
-        <h2>
-          Your brand new folio with a professional layout collection
-          and quite a cheerful <em>personality!</em>
-        </h2>
-
-        <button className="cheerfulBtn">PURCHASE</button>
-      </div>
-<br /><br />
-        <div className="lastleaf">
-        <img className="last" src={img20} alt="" />
-<img className="last" src={img19} alt="" />
-<img className="last" src={img21} alt="" />
-
-      </div>
-    </section>
-</>
-
-  
+      </section>
+    </>
   );
 }
 
 export default Navbar;
-
