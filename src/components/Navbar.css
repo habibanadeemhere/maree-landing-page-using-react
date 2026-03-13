@@ -408,223 +408,129 @@ color: #FAFAFA;
     height: 60vh;
 }
 
-/* ── Hero text fade + slide up ── */
-.animate-hero-text {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 0.2s;
+/* HERO TEXT ANIMATIONS */
+
+.animate-title{
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 0.8s ease forwards;
+  animation-delay:0.2s;
 }
 
-/* ── Butterfly arc entrance ── */
-.butterfly-entrance {
-  opacity: 0;
-  animation: arcDrop 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  animation-delay: 0.8s;
-  transform-origin: left center;
+.animate-para{
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 0.8s ease forwards;
+  animation-delay:0.5s;
 }
 
-/* ── Cloud slides in from left ── */
-.animate-cloud {
-  opacity: 0;
-  animation: slideInLeft 1s ease forwards;
-  animation-delay: 0.5s;
-}
-
-/* ── Bird slides in from right ── */
-.animate-bird {
-  opacity: 0;
-  animation: slideInRight 1s ease forwards;
-  animation-delay: 0.6s;
-}
-
-/* ── Leaves fade up from bottom ── */
-.animate-leaves {
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 0.7s;
-}
-
-/* ── Bike slides in from left ── */
-.animate-bike {
-  opacity: 0;
-  animation: slideInLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 0.4s;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-60px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(60px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes arcDrop {
-  0%   { opacity: 1; transform: translate(-80px, -100px) rotate(-130deg) scale(0.5); }
-  50%  { transform: translate(-20px, -30px) rotate(-50deg) scale(0.9); }
-  80%  { transform: translate(4px, 8px) rotate(8deg) scale(1.05); }
-  100% { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+.animate-btn{
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 0.8s ease forwards;
+  animation-delay:0.8s;
 }
 
 
-/* ── ENTRANCE ANIMATIONS ── */
+/* BUTTERFLY ENTRANCE */
 
-.animate-hero-text {
-  opacity: 0;
-  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.2s;
-}
-
-.butterfly-entrance {
-  opacity: 0;
-  animation: arcDrop 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.8s;
-  transform-origin: left center;
-  display: inline-block;
-}
-
-.animate-cloud {
-  opacity: 0;
-  animation: slideInLeft 1s ease forwards 0.5s;
-}
-
-.animate-bird {
-  opacity: 0;
-  animation: slideInRight 1s ease forwards 0.6s;
-}
-
-.animate-leaves {
-  opacity: 0;
-  animation: fadeUp 1s ease forwards 0.7s;
-}
-
-.animate-bike {
-  opacity: 0;
-  animation: slideInLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.4s;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-80px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(80px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes arcDrop {
-  0%   { opacity: 1; transform: translate(-80px, -100px) rotate(-130deg) scale(0.5); }
-  50%  { transform: translate(-20px, -30px) rotate(-50deg) scale(0.9); }
-  80%  { transform: translate(4px, 8px) rotate(8deg) scale(1.05); }
-  100% { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+.butterfly-entrance{
+  opacity:0;
+  display:inline-block;
+  transform-origin:left center;
+  animation:arcDrop 1.1s ease forwards;
+  animation-delay:0.9s;
 }
 
 
-/* ── HERO ENTRANCE ANIMATIONS ── */
+/* CLOUD */
 
-.animate-title {
-  opacity: 0;
-  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.1s;
-}
-
-.animate-para {
-  opacity: 0;
-  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.35s;
-}
-
-.animate-btn {
-  opacity: 0;
-  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.55s;
-}
-
-.butterfly-entrance {
-  opacity: 0;
-  display: inline-block;
-  animation: arcDrop 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.9s;
-  transform-origin: left center;
-}
-
-.animate-cloud {
-  opacity: 0;
-  animation: slideInLeft 1s ease forwards 0.3s;
-}
-
-.animate-bird {
-  opacity: 0;
-  animation: slideInRight 1s ease forwards 0.5s;
-}
-
-.animate-bike {
-  opacity: 0;
-  animation: slideInLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.2s;
-}
-
-.animate-leaves {
-  opacity: 0;
-  animation: fadeUp 1s ease forwards 0.6s;
-}
-.animate-leaves-d2 { animation-delay: 0.75s; }
-.animate-leaves-d3 { animation-delay: 0.9s;  }
-.animate-leaves-d4 { animation-delay: 1.05s; }
-
-/* ── KEYFRAMES ── */
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(35px); }
-  to   { opacity: 1; transform: translateY(0);    }
-}
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-70px); }
-  to   { opacity: 1; transform: translateX(0);     }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(70px); }
-  to   { opacity: 1; transform: translateX(0);    }
-}
-
-@keyframes arcDrop {
-  0%   { opacity: 1; transform: translate(-80px, -100px) rotate(-130deg) scale(0.5); }
-  50%  { transform: translate(-20px, -30px) rotate(-50deg) scale(0.9);               }
-  80%  { transform: translate(4px, 8px) rotate(8deg) scale(1.05);                    }
-  100% { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1);               }
+.animate-cloud{
+  opacity:0;
+  animation:slideInLeft 1s ease forwards;
+  animation-delay:0.3s;
 }
 
 
-/* HERO TEXT ANIMATION */
+/* BIRD */
 
-.animate-title {
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 0.2s;
-}
-
-.animate-para {
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 0.5s;
-}
-
-.animate-btn {
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 0.8s;
+.animate-bird{
+  opacity:0;
+  animation:slideInRight 1s ease forwards;
+  animation-delay:0.5s;
 }
 
 
-.hero-text{
-  animation: fadeUp 1s ease forwards;
+/* BIKE */
+
+.animate-bike{
+  opacity:0;
+  animation:slideInLeft 1.2s ease forwards;
+  animation-delay:0.2s;
+}
+
+
+/* LEAVES */
+
+.animate-leaves{
+  opacity:0;
+  animation:fadeUp 1s ease forwards;
+  animation-delay:0.6s;
+}
+
+.animate-leaves-d2{ animation-delay:0.75s; }
+.animate-leaves-d3{ animation-delay:0.9s; }
+.animate-leaves-d4{ animation-delay:1.05s; }
+
+
+/* KEYFRAMES */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(35px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes slideInLeft{
+  from{
+    opacity:0;
+    transform:translateX(-70px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes slideInRight{
+  from{
+    opacity:0;
+    transform:translateX(70px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes arcDrop{
+  0%{
+    opacity:1;
+    transform:translate(-80px,-100px) rotate(-130deg) scale(0.5);
+  }
+  50%{
+    transform:translate(-20px,-30px) rotate(-50deg) scale(0.9);
+  }
+  80%{
+    transform:translate(4px,8px) rotate(8deg) scale(1.05);
+  }
+  100%{
+    opacity:1;
+    transform:translate(0,0) rotate(0deg) scale(1);
+  }
 }
